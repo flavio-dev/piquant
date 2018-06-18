@@ -8,26 +8,54 @@ import './Home.css'
 class Home extends Component {
   constructor(props) {
     super(props)
-    this.state = { imageClass: 'HomeLogo' }
+    this.state = {
+      showLogo: false,
+      showSections: false
+    }
     this.handleImageLoaded = this.handleImageLoaded.bind(this)
+    this.handleImageLoadedError = this.handleImageLoadedError.bind(this)
+    this.showSections = this.showSections.bind(this)
   }
 
   handleImageLoaded() {
     this.setState({
-      imageClass: 'HomeLogo HomeLogoShow'
+      showLogo: true
     })
+
+    this.showSections()
+  }
+
+  handleImageLoadedError() {
+    this.showSections()
+  }
+
+  showSections() {
+    setTimeout(() => {
+      this.setState({
+        showSections: true
+      })
+    }, 1500)
   }
 
   render() {
+    const logoClass = this.state.showLogo
+      ? 'HomeLogo HomeLogoShow'
+      : 'HomeLogo'
+
+    const sectionClass = this.state.showSections
+      ? 'HomeSection HomeSectionShow'
+      : 'HomeSection'
+
     return (
       <div className='Home'>
         <img src={logo}
-          className={this.state.imageClass}
+          className={logoClass}
           alt='Piquant'
           onLoad={this.handleImageLoaded}
+          onError={this.handleImageLoadedError}
         />
-        <div className='HomeSection'>
-          <Element name='test1' id='about'>
+        <div className={sectionClass}>
+          <Element name='about'>
             <h2>Hi, I am Portia</h2>
           </Element>
           <p>
