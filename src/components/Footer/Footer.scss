@@ -3,14 +3,12 @@
 .Footer {
   background-color: $color-quiet-black;
   color: $color-pale-pink;
-  font-size: small;
-  height: 114px;
+  padding: 20px;
   width: 100%;
 }
 
 .FooterInner {
   @include default-wrapper-width();
-  padding-top: 20px;
 }
 
 .FooterInfo {
