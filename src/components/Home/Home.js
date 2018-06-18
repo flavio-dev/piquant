@@ -25,6 +25,17 @@ class Home extends Component {
           alt='Piquant'
           onLoad={this.handleImageLoaded}
         />
+        <div className='HomeSection'>
+          <h2 id='about'>Hi, I am Portia</h2>
+          <p>
+            Piquant is my definition of how I make food. This is bcdhiaoch dio
+            ahco adhcoh dsoch sodch iodshc ohdsoichdiosch iohds cj</p>
+          <p>
+            Piquant is my definition of how I make food dsico jsdoj
+            ciosd jcijsdocjsdioc jsdjcos djc dsjoc jdsiocj siojcosi.
+          </p>
+          <p>Hope to see you enjoying my food soon!</p>
+        </div>
       </div>
     )
   }

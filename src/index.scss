@@ -22,13 +22,14 @@ th, td {
 body {
   color: $color-quiet-black;
   font-family: $base-font-family;
+  font-size: small;
 
   @media #{$medium-and-up} {
-    font-size: large;
+    font-size: medium;
   }
 
   @media #{$large-and-up} {
-    font-size: x-large;
+    font-size: large;
   }
 }
 
@@ -46,4 +47,8 @@ h2 {
 
 a {
   text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
 }

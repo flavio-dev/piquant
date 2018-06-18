@@ -11,6 +11,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
 
   @media #{$medium-and-up} {
     background: url(images/background.jpg) no-repeat center center fixed;
