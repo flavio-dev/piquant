@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-scroll'
 
 import Button from 'components/Button'
 
@@ -39,19 +40,25 @@ class Header extends Component {
           </div>
           <div className={menuClass}>
             <div onClick={this.closeMenu}>
-              <Button text={'About'} url={'#about'} />
+              <Link to='about' smooth duration={500}>
+                <Button text={'About'} />
+              </Link>
             </div>
             <div
               className='HeaderButton'
               onClick={this.closeMenu}
             >
-              <Button text={'Future Events'} url={'#futureevent'} />
+              <Link to='futureevents' smooth duration={500}>
+                <Button text={'Future Events'} />
+              </Link>
             </div>
             <div
               className='HeaderButton'
               onClick={this.closeMenu}
             >
-              <Button text={'Contact'} url={'#contact'} />
+              <Link to='contact' smooth duration={500}>
+                <Button text={'Contact'} />
+              </Link>
             </div>
           </div>
         </div>

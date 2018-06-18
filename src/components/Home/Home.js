@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Element } from 'react-scroll'
 
 import logo from 'images/logo.png'
 
@@ -26,7 +27,9 @@ class Home extends Component {
           onLoad={this.handleImageLoaded}
         />
         <div className='HomeSection'>
-          <h2 id='about'>Hi, I am Portia</h2>
+          <Element name='test1' id='about'>
+            <h2>Hi, I am Portia</h2>
+          </Element>
           <p>
             Piquant is my definition of how I make food. This is bcdhiaoch dio
             ahco adhcoh dsoch sodch iodshc ohdsoichdiosch iohds cj</p>
