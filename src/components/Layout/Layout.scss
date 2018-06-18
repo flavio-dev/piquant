@@ -1,0 +1,9 @@
+@import "globals.scss";
+
+.LayoutContent {
+  padding-top: $height-header-small;
+
+  @media #{$medium-and-up} {
+    padding-top: $height-header-big;
+  }
+}

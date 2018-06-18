@@ -1,0 +1,60 @@
+@import "globals.scss";
+
+.Header {
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+
+  @media #{$medium-and-up} {
+    padding-top: 0px;
+  }
+}
+
+.HeaderInner {
+  @include default-wrapper-width();
+  display: flex;
+  justify-content: space-between;
+
+  @media #{$medium-and-up} {
+    justify-content: flex-end;
+  }
+}
+
+.HeaderMenuButton {
+  height: fit-content;
+
+  @media #{$medium-and-up} {
+    display: none;
+  }
+}
+
+.HeaderMenu {
+  @include transitions(left);
+  align-items: center;
+  display: flex;
+  height: $height-header-big;
+
+  &.HeaderMenuOpen {
+    left: 0px;
+  }
+
+  @media #{$small-and-down} {
+    align-items: flex-end;
+    flex-direction: column;
+    left: 200px;
+    position: relative;
+  }
+}
+
+.HeaderButton {
+  margin-top: 10px;
+
+  @media #{$medium-and-up} {
+    margin-left: 10px;
+    margin-top: 0px;
+  }
+
+  @media #{$large-and-up} {
+    margin-left: 20px;
+  }
+}

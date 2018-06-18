@@ -22,4 +22,28 @@ th, td {
 body {
   color: $color-quiet-black;
   font-family: $base-font-family;
+
+  @media #{$medium-and-up} {
+    font-size: large;
+  }
+
+  @media #{$large-and-up} {
+    font-size: x-large;
+  }
+}
+
+h2 {
+    font-size: large;
+
+    @media #{$medium-and-up} {
+      font-size: x-large;
+    }
+
+    @media #{$large-and-up} {
+      font-size: xx-large;
+    }
+}
+
+a {
+  text-decoration: none;
 }

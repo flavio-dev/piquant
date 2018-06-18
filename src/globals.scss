@@ -18,9 +18,10 @@ $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
 
 $color-quiet-black: #291515;
+$color-pale-pink: #F6B9C1;
 
-$height-header-small: 85px;
-$height-header-big: 105px;
+$height-header-small: 75px;
+$height-header-big: 95px;
 
 @mixin default-wrapper-width() {
   margin-left: auto;
@@ -30,6 +31,10 @@ $height-header-big: 105px;
   @media #{$medium-and-up} {
       width: $medium-and-up-inner-width;
   }
+}
+
+@mixin slow-transitions($property, $timing-function: ease) {
+    transition: $property 1s $timing-function;
 }
 
 @mixin transitions($property, $timing-function: ease) {
