@@ -134,28 +134,45 @@ class Home extends Component {
                   backgroundSize: 'cover'
                 }}
                 className='HomeImage'
-              />
+              >
+                <p className='HomeImageInfo'>
+                  Plantano Rellano stuffed with avocado cream topped with chipotle adobe mushrooms
+                </p>
+              </div>
               <div
                 style={{
                   backgroundImage: 'url(' + this.state.image2Src + ')',
                   backgroundSize: 'cover'
                 }}
                 className='HomeImage'
-              />
+              >
+                <p className='HomeImageInfo'>
+                  Ackee & Saltfish money bags with house hot sauce
+                </p>
+              </div>
               <div
                 style={{
                   backgroundImage: 'url(' + this.state.image3Src + ')',
                   backgroundSize: 'cover'
                 }}
                 className='HomeImage'
-              />
+              >
+                <p className='HomeImageInfo'>
+                  48-hour marinated slow cooked pulled jerk chicken served in a steamed coconut bun with Carabbean slaw
+                </p>
+              </div>
               <div
                 style={{
                   backgroundImage: 'url(' + this.state.image4Src + ')',
                   backgroundSize: 'cover'
                 }}
                 className='HomeImage'
-              />
+              >
+                <p className='HomeImageInfo'>
+                  Poached pear steeped in cinnamon, star anise, cardamon infused
+                  sorrel, served with Creme Anglaise topped with crished Meringue & Pistachios
+                </p>
+              </div>
             </div>
             <div className='HomeInsta'>
               <a href='https://www.instagram.com/eatatpiquant/' target='_blank'>

@@ -22,7 +22,7 @@
 }
 
 .HomeLogo {
-  @include slow-transitions(all)
+  @include slow-transitions(all);
   @extend %SectionMargins;
   opacity: 0;
   margin-top: 30px;
@@ -74,7 +74,7 @@
 }
 
 .HomeImages {
-  @include slow-transitions(all)
+  @include slow-transitions(all);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -98,17 +98,52 @@
 }
 
 .HomeImage {
-  padding-top: 100%;
   border-radius: 10%;
+  color: $color-pale-pink;
   margin-top: 4%;
   max-width: 500px;
   max-height: 500px;
+  padding-top: 100%;
+  position: relative;
   width: 100%;
 
   @media #{$medium-and-up} {
     padding-top: 48%;
     width: 48%;
   }
+
+  &:after {
+    @include transitions(all);
+    content: '';
+    background: $color-quiet-black-transparent;
+    border-radius: 10%;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &:hover:after,
+  &:focus:after {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &:hover .HomeImageInfo,
+  &:focus .HomeImageInfo {
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+.HomeImageInfo {
+  @include transitions(all);
+  padding: 5px 10px;
+  position: absolute;
+  opacity: 0;
+  top: 5px;
 }
 
 .HomeInsta {
