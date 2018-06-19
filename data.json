@@ -1,14 +1,14 @@
 {
   "about": {
-      "title": "Hi, I'm Portia",
-      "paragraphs": [
+    "title": "Hi, I'm Portia",
+    "paragraphs": [
       "Piquant is my definition of how I make food. This is bcdhiaoch dio
       ahco adhcoh dsoch sodch iodshc ohdsoichdiosch iohds cj.",
       "Piquant is my definition of how I make food dsico jsdoj
       ciosd jcijsdocjsdioc jsdjcos djc dsjoc jdsiocj siojcosi.",
       "Hope to see you enjoying my food soon!"
     ]
-    },
+  },
   "images": {
     "image1": {
       "url": "https://github.com/flavio-dev/piquant/raw/master/images/01.jpg",
