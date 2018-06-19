@@ -8,6 +8,7 @@ import image2 from 'images/02.jpg'
 import image3 from 'images/03.jpg'
 import image4 from 'images/04.jpg'
 import InstaIcon from 'components/InstaIcon'
+import whatwgFetch from 'utils/fetch'
 
 import './Home.css'
 
@@ -15,6 +16,9 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      data: {
+        about: []
+      },
       showLogo: false,
       showSectionAbout: false,
       showSectionContact: false,
@@ -82,6 +86,13 @@ class Home extends Component {
     }
   }
 
+  componentDidMount() {
+    whatwgFetch('https://raw.githubusercontent.com/flavio-dev/piquant/master/data.json')
+      .then(res => {
+        this.setState({data: res})
+      })
+  }
+
   render() {
     const logoClass = this.state.showLogo
       ? 'HomeLogo HomeLogoShow'
@@ -103,6 +114,8 @@ class Home extends Component {
       ? 'HomeImages HomeImagesShow'
       : 'HomeImages'
 
+    const {about} = this.state.data
+
     return (
       <div className='Home'>
         <img src={logo}
@@ -115,14 +128,9 @@ class Home extends Component {
           <Element name='about'>
             <h2>Hi, I am Portia ABOUT</h2>
           </Element>
-          <p>
-            Piquant is my definition of how I make food. This is bcdhiaoch dio
-            ahco adhcoh dsoch sodch iodshc ohdsoichdiosch iohds cj</p>
-          <p>
-            Piquant is my definition of how I make food dsico jsdoj
-            ciosd jcijsdocjsdioc jsdjcos djc dsjoc jdsiocj siojcosi.
-          </p>
-          <p>Hope to see you enjoying my food soon!</p>
+          {about.map((text, index) => (
+            <p key={index}>{text}</p>
+          ))}
           <ScrollTrigger
             triggerOnLoad={false}
             onEnter={this.showImages}
