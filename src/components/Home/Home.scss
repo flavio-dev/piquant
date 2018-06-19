@@ -97,61 +97,6 @@
   }
 }
 
-.HomeImage {
-  background-color: $color-quiet-black-transparent;
-  border-radius: 10%;
-  color: $color-pale-pink;
-  margin-top: 4%;
-  max-height: 500px;
-  max-width: 500px;
-  padding-top: 100%;
-  position: relative;
-  width: 100%;
-
-  @media #{$medium-and-up} {
-    padding-top: 48%;
-    width: 48%;
-  }
-
-  @media #{$large-and-up} {
-    padding-top: 24%;
-    width: 24%;
-  }
-
-  &:after {
-    @include transitions(all);
-    content: '';
-    background: $color-quiet-black-transparent;
-    border-radius: 10%;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
-  &:hover:after,
-  &:focus:after {
-    opacity: 1;
-    z-index: 1;
-  }
-
-  &:hover .HomeImageInfo,
-  &:focus .HomeImageInfo {
-    opacity: 1;
-    z-index: 2;
-  }
-}
-
-.HomeImageInfo {
-  @include transitions(all);
-  padding: 10px 20px;
-  position: absolute;
-  opacity: 0;
-  top: 5px;
-}
-
 .HomeInsta {
   margin-top: 20px;
 

@@ -4,6 +4,7 @@ import ScrollTrigger from 'react-scroll-trigger'
 
 import logo from 'images/logo.png'
 import Loader from 'components/Loader'
+import Image from 'components/Image'
 import InstaIcon from 'components/InstaIcon'
 import BunIcon from 'components/BunIcon'
 import whatwgFetch from 'utils/fetch'
@@ -129,12 +130,12 @@ class Home extends Component {
           onLoad={this.handleLogoLoaded}
           onError={this.handleLogoLoadedError}
         />
-        {isLoading &&
-          <Loader>
-            <BunIcon rotate />
-          </Loader>
-        }
         <div className={sectionAboutClass}>
+          {isLoading &&
+            <Loader>
+              <BunIcon rotate />
+            </Loader>
+          }
           <Element name='about'>
             <h2>{about.title}</h2>
           </Element>
@@ -146,58 +147,22 @@ class Home extends Component {
             onEnter={this.showImages}
           >
             <div className={imagesClass}>
-              <div
-                style={{
-                  backgroundImage: 'url(' + (images.image1 && images.image1.url) || '' + ')',
-                  backgroundSize: 'cover'
-                }}
-                className='HomeImage'
-              >
-                {images.image1 && images.image1.blurb &&
-                  <div className='HomeImageInfo'>
-                    {images.image1.blurb}
-                  </div>
-                }
-              </div>
-              <div
-                style={{
-                  backgroundImage: 'url(' + (images.image2 && images.image2.url) || '' + ')',
-                  backgroundSize: 'cover'
-                }}
-                className='HomeImage'
-              >
-                {images.image2 && images.image2.blurb &&
-                  <div className='HomeImageInfo'>
-                    {images.image2.blurb}
-                  </div>
-                }
-              </div>
-              <div
-                style={{
-                  backgroundImage: 'url(' + (images.image3 && images.image3.url) || '' + ')',
-                  backgroundSize: 'cover'
-                }}
-                className='HomeImage'
-              >
-                {images.image3 && images.image3.blurb &&
-                  <div className='HomeImageInfo'>
-                    {images.image3.blurb}
-                  </div>
-                }
-              </div>
-              <div
-                style={{
-                  backgroundImage: 'url(' + (images.image4 && images.image4.url) || '' + ')',
-                  backgroundSize: 'cover'
-                }}
-                className='HomeImage'
-              >
-                {images.image4 && images.image4.blurb &&
-                  <div className='HomeImageInfo'>
-                    {images.image4.blurb}
-                  </div>
-                }
-              </div>
+              <Image
+                url={(images.image1 && images.image1.url) || ''}
+                blurb={(images.image1 && images.image1.blurb) || ''}
+              />
+              <Image
+                url={(images.image2 && images.image2.url) || ''}
+                blurb={(images.image2 && images.image2.blurb) || ''}
+              />
+              <Image
+                url={(images.image3 && images.image3.url) || ''}
+                blurb={(images.image3 && images.image3.blurb) || ''}
+              />
+              <Image
+                url={(images.image4 && images.image4.url) || ''}
+                blurb={(images.image4 && images.image4.blurb) || ''}
+              />
             </div>
             <div className='HomeInsta'>
               <a href='https://www.instagram.com/eatatpiquant/' target='_blank'>
@@ -210,6 +175,11 @@ class Home extends Component {
 
         <ScrollTrigger triggerOnLoad={false} onEnter={() => this.showSections('events')}>
           <div className={sectionEventClass}>
+            {isLoading &&
+              <Loader>
+                <BunIcon rotate />
+              </Loader>
+            }
             <Element name='events'>
               <h2>Hi, I am Portia EVENTS</h2>
             </Element>
@@ -226,6 +196,11 @@ class Home extends Component {
         </ScrollTrigger>
         <ScrollTrigger triggerOnLoad={false} onEnter={() => this.showSections('contact')}>
           <div className={sectionContactClass}>
+            {isLoading &&
+              <Loader>
+                <BunIcon rotate />
+              </Loader>
+            }
             <Element name='contact'>
               <h2>Hi, I am Portia CONTACT</h2>
             </Element>
