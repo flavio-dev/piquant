@@ -3,10 +3,10 @@ import { Element } from 'react-scroll'
 import ScrollTrigger from 'react-scroll-trigger'
 
 import logo from 'images/logo.png'
-import image1 from 'images/01.jpg'
-import image2 from 'images/02.jpg'
-import image3 from 'images/03.jpg'
-import image4 from 'images/04.jpg'
+// import image1 from 'images/01.jpg'
+// import image2 from 'images/02.jpg'
+// import image3 from 'images/03.jpg'
+// import image4 from 'images/04.jpg'
 import InstaIcon from 'components/InstaIcon'
 import whatwgFetch from 'utils/fetch'
 
@@ -17,7 +17,16 @@ class Home extends Component {
     super(props)
     this.state = {
       data: {
-        about: []
+        about: {
+          title: "Hi there!",
+          paragraphs: []
+        },
+        images: {
+          image1: {},
+          image2: {},
+          image3: {},
+          image4: {}
+        }
       },
       showLogo: false,
       showSectionAbout: false,
@@ -47,12 +56,13 @@ class Home extends Component {
   }
 
   showImages() {
+    const {images} = this.state.data
     this.setState({
       showImages: true,
-      image1Src: image1,
-      image2Src: image2,
-      image3Src: image3,
-      image4Src: image4
+      image1Src: images.image1 && images.image1.url,
+      image2Src: images.image2 && images.image2.url,
+      image3Src: images.image3 && images.image3.url,
+      image4Src: images.image4 && images.image4.url
     })
   }
 
@@ -114,7 +124,7 @@ class Home extends Component {
       ? 'HomeImages HomeImagesShow'
       : 'HomeImages'
 
-    const {about} = this.state.data
+    const {about, images} = this.state.data
 
     return (
       <div className='Home'>
@@ -126,9 +136,9 @@ class Home extends Component {
         />
         <div className={sectionAboutClass}>
           <Element name='about'>
-            <h2>Hi, I am Portia ABOUT</h2>
+            <h2>about.title</h2>
           </Element>
-          {about.map((text, index) => (
+          {about.paragraphs.map((text, index) => (
             <p key={index}>{text}</p>
           ))}
           <ScrollTrigger
@@ -143,9 +153,11 @@ class Home extends Component {
                 }}
                 className='HomeImage'
               >
-                <p className='HomeImageInfo'>
-                  Plantano Rellano stuffed with avocado cream topped with chipotle adobe mushrooms
-                </p>
+                {images.image1 && images.image1.blurb &&
+                  <p className='HomeImageInfo'>
+                    {images.image1.blurb}
+                  </p>
+                }
               </div>
               <div
                 style={{
@@ -154,9 +166,11 @@ class Home extends Component {
                 }}
                 className='HomeImage'
               >
-                <p className='HomeImageInfo'>
-                  Ackee & Saltfish money bags with house hot sauce
-                </p>
+                {images.image2 && images.image2.blurb &&
+                  <p className='HomeImageInfo'>
+                    {images.image2.blurb}
+                  </p>
+                }
               </div>
               <div
                 style={{
@@ -165,9 +179,11 @@ class Home extends Component {
                 }}
                 className='HomeImage'
               >
-                <p className='HomeImageInfo'>
-                  48-hour marinated slow cooked pulled jerk chicken served in a steamed coconut bun with Carabbean slaw
-                </p>
+                {images.image3 && images.image3.blurb &&
+                  <p className='HomeImageInfo'>
+                    {images.image3.blurb}
+                  </p>
+                }
               </div>
               <div
                 style={{
@@ -176,10 +192,11 @@ class Home extends Component {
                 }}
                 className='HomeImage'
               >
-                <p className='HomeImageInfo'>
-                  Poached pear steeped in cinnamon, star anise, cardamon infused
-                  sorrel, served with Creme Anglaise topped with crished Meringue & Pistachios
-                </p>
+                {images.image4 && images.image4.blurb &&
+                  <p className='HomeImageInfo'>
+                    {images.image4.blurb}
+                  </p>
+                }
               </div>
             </div>
             <div className='HomeInsta'>

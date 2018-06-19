@@ -1,9 +1,30 @@
 {
-  "about": [
-    "Piquant is my definition of how I make food. This is bcdhiaoch dio
-    ahco adhcoh dsoch sodch iodshc ohdsoichdiosch iohds cj.",
-    "Piquant is my definition of how I make food dsico jsdoj
-    ciosd jcijsdocjsdioc jsdjcos djc dsjoc jdsiocj siojcosi.",
-    "Hope to see you enjoying my food soon!"
-  ]
+  "about": {
+      "title": "Hi, I'm Portia",
+      "paragraphs": [
+      "Piquant is my definition of how I make food. This is bcdhiaoch dio
+      ahco adhcoh dsoch sodch iodshc ohdsoichdiosch iohds cj.",
+      "Piquant is my definition of how I make food dsico jsdoj
+      ciosd jcijsdocjsdioc jsdjcos djc dsjoc jdsiocj siojcosi.",
+      "Hope to see you enjoying my food soon!"
+    ]
+    },
+  "images": {
+    "image1": {
+      "url": "https://github.com/flavio-dev/piquant/raw/master/images/01.jpg",
+      "blurb": "Plantano Rellano stuffed with avocado cream topped with chipotle adobe mushrooms"
+    },
+    "image2": {
+      "url": "https://github.com/flavio-dev/piquant/raw/master/images/02.jpg",
+      "blurb": "Ackee & Saltfish money bags with house hot sauce"
+    },
+    "image3": {
+      "url": "https://github.com/flavio-dev/piquant/raw/master/images/03.jpg",
+      "blurb": "48-hour marinated slow cooked pulled jerk chicken served in a steamed coconut bun with Carabbean slaw"
+    },
+    "image4": {
+      "url": "https://github.com/flavio-dev/piquant/raw/master/images/04.jpg",
+      "blurb": "Poached pear steeped in cinnamon, star anise, cardamon infused sorrel, served with Creme Anglaise topped with crished Meringue & Pistachios"
+    }
+  }
 }
