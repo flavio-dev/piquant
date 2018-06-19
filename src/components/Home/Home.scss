@@ -98,37 +98,12 @@
 }
 
 .HomeImage {
-  @include slow-transitions(opacity);
-  border-radius: 10%;
-  height: 100%;
-  margin-top: 4%;
-  max-width: 500px;
-  max-height: 500px;
-  opacity: 0;
-  width: 100%;
-
-  &.HomeImageShow {
-    opacity: 1;
-  }
-
-  @media #{$medium-and-up} {
-    height: 48%;
-    width: 48%;
-  }
-}
-
-.HomeImageTest {
   padding-top: 100%;
   border-radius: 10%;
   margin-top: 4%;
   max-width: 500px;
   max-height: 500px;
-  opacity: 0;
   width: 100%;
-
-  &.HomeImageShow {
-    opacity: 1;
-  }
 
   @media #{$medium-and-up} {
     padding-top: 48%;

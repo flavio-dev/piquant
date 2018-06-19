@@ -19,18 +19,12 @@ class Home extends Component {
       showSectionAbout: false,
       showSectionContact: false,
       showSectionEvents: false,
-      showImage1: false,
-      showImage2: false,
-      showImage3: false,
-      showImage4: false,
-      showImages: false,
       image1Src: '',
       image2Src: '',
       image3Src: '',
       image4Src: ''
     }
     this.handleLogoLoaded = this.handleLogoLoaded.bind(this)
-    this.handleImageLoaded = this.handleImageLoaded.bind(this)
     this.handleLogoLoadedError = this.handleLogoLoadedError.bind(this)
     this.showSections = this.showSections.bind(this)
     this.showImages = this.showImages.bind(this)
@@ -46,43 +40,6 @@ class Home extends Component {
 
   handleLogoLoadedError() {
     this.showSections('about')
-  }
-
-  handleImageLoaded(imageNumber) {
-    switch (imageNumber) {
-      case 1:
-        console.log('in CASE 1')
-        setTimeout(() => {
-          console.log('in the setTimeout')
-          this.setState({
-            showImage1: true
-          })
-        }, 4000)
-        break
-      case 2:
-        this.setState({
-          showImage2: true
-        })
-        break
-      case 3:
-        this.setState({
-          showImage3: true
-        })
-        break
-      case 4:
-        this.setState({
-          showImage4: true
-        })
-        break
-      default:
-        this.setState({
-          showImage1: true,
-          showImage2: true,
-          showImage3: true,
-          showImage4: true
-        })
-        break
-    }
   }
 
   showImages() {
@@ -142,22 +99,6 @@ class Home extends Component {
       ? 'HomeSection HomeSectionShow'
       : 'HomeSection'
 
-    const image1Class = this.state.showImage1
-      ? 'HomeImageTest HomeImageShow'
-      : 'HomeImageTest'
-
-    const image2Class = this.state.showImage2
-      ? 'HomeImage HomeImageShow'
-      : 'HomeImage'
-
-    const image3Class = this.state.showImage3
-      ? 'HomeImage HomeImageShow'
-      : 'HomeImage'
-
-    const image4Class = this.state.showImage4
-      ? 'HomeImage HomeImageShow'
-      : 'HomeImage'
-
     const imagesClass = this.state.showImages
       ? 'HomeImages HomeImagesShow'
       : 'HomeImages'
@@ -192,23 +133,28 @@ class Home extends Component {
                   backgroundImage: 'url(' + this.state.image1Src + ')',
                   backgroundSize: 'cover'
                 }}
-                className={image1Class}
-                onLoad={() => this.handleImageLoaded(1)}
+                className='HomeImage'
               />
-              <img src={this.state.image2Src}
-                className={image2Class}
-                alt='food image 2'
-                onLoad={() => this.handleImageLoaded(2)}
+              <div
+                style={{
+                  backgroundImage: 'url(' + this.state.image2Src + ')',
+                  backgroundSize: 'cover'
+                }}
+                className='HomeImage'
               />
-              <img src={this.state.image3Src}
-                className={image3Class}
-                alt='food image 3'
-                onLoad={() => this.handleImageLoaded(3)}
+              <div
+                style={{
+                  backgroundImage: 'url(' + this.state.image3Src + ')',
+                  backgroundSize: 'cover'
+                }}
+                className='HomeImage'
               />
-              <img src={this.state.image4Src}
-                className={image4Class}
-                alt='food image 4'
-                onLoad={() => this.handleImageLoaded(4)}
+              <div
+                style={{
+                  backgroundImage: 'url(' + this.state.image4Src + ')',
+                  backgroundSize: 'cover'
+                }}
+                className='HomeImage'
               />
             </div>
             <div className='HomeInsta'>
