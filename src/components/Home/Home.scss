@@ -98,11 +98,12 @@
 }
 
 .HomeImage {
+  background-color: $color-quiet-black-transparent;
   border-radius: 10%;
   color: $color-pale-pink;
   margin-top: 4%;
-  max-width: 500px;
   max-height: 500px;
+  max-width: 500px;
   padding-top: 100%;
   position: relative;
   width: 100%;
@@ -110,6 +111,11 @@
   @media #{$medium-and-up} {
     padding-top: 48%;
     width: 48%;
+  }
+
+  @media #{$large-and-up} {
+    padding-top: 24%;
+    width: 24%;
   }
 
   &:after {
@@ -140,7 +146,7 @@
 
 .HomeImageInfo {
   @include transitions(all);
-  padding: 5px 10px;
+  padding: 10px 20px;
   position: absolute;
   opacity: 0;
   top: 5px;

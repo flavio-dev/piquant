@@ -3,11 +3,9 @@ import { Element } from 'react-scroll'
 import ScrollTrigger from 'react-scroll-trigger'
 
 import logo from 'images/logo.png'
-// import image1 from 'images/01.jpg'
-// import image2 from 'images/02.jpg'
-// import image3 from 'images/03.jpg'
-// import image4 from 'images/04.jpg'
+import Loader from 'components/Loader'
 import InstaIcon from 'components/InstaIcon'
+import BunIcon from 'components/BunIcon'
 import whatwgFetch from 'utils/fetch'
 
 import './Home.css'
@@ -18,7 +16,7 @@ class Home extends Component {
     this.state = {
       data: {
         about: {
-          title: 'Hi there!',
+          title: '',
           paragraphs: []
         },
         images: {
@@ -32,11 +30,9 @@ class Home extends Component {
       showSectionAbout: false,
       showSectionContact: false,
       showSectionEvents: false,
-      image1Src: '',
-      image2Src: '',
-      image3Src: '',
-      image4Src: ''
+      isLoading: true
     }
+
     this.handleLogoLoaded = this.handleLogoLoaded.bind(this)
     this.handleLogoLoadedError = this.handleLogoLoadedError.bind(this)
     this.showSections = this.showSections.bind(this)
@@ -56,13 +52,8 @@ class Home extends Component {
   }
 
   showImages() {
-    const {images} = this.state.data
     this.setState({
-      showImages: true,
-      image1Src: images.image1 && images.image1.url,
-      image2Src: images.image2 && images.image2.url,
-      image3Src: images.image3 && images.image3.url,
-      image4Src: images.image4 && images.image4.url
+      showImages: true
     })
   }
 
@@ -74,7 +65,7 @@ class Home extends Component {
           this.setState({
             showSectionAbout: true
           })
-        }, 1500)
+        }, 1000)
         break
       case 'contact':
         this.setState({
@@ -99,7 +90,10 @@ class Home extends Component {
   componentDidMount() {
     whatwgFetch('https://raw.githubusercontent.com/flavio-dev/piquant/master/data.json')
       .then(res => {
-        this.setState({data: res})
+        this.setState({
+          data: res,
+          isLoading: false
+        })
       })
   }
 
@@ -124,7 +118,8 @@ class Home extends Component {
       ? 'HomeImages HomeImagesShow'
       : 'HomeImages'
 
-    const {about, images} = this.state.data
+    const {isLoading, data} = this.state
+    const {about, images} = data
 
     return (
       <div className='Home'>
@@ -134,9 +129,14 @@ class Home extends Component {
           onLoad={this.handleLogoLoaded}
           onError={this.handleLogoLoadedError}
         />
+        {isLoading &&
+          <Loader>
+            <BunIcon rotate />
+          </Loader>
+        }
         <div className={sectionAboutClass}>
           <Element name='about'>
-            <h2>about.title</h2>
+            <h2>{about.title}</h2>
           </Element>
           {about.paragraphs.map((text, index) => (
             <p key={index}>{text}</p>
@@ -148,54 +148,54 @@ class Home extends Component {
             <div className={imagesClass}>
               <div
                 style={{
-                  backgroundImage: 'url(' + this.state.image1Src + ')',
+                  backgroundImage: 'url(' + (images.image1 && images.image1.url) || '' + ')',
                   backgroundSize: 'cover'
                 }}
                 className='HomeImage'
               >
                 {images.image1 && images.image1.blurb &&
-                  <p className='HomeImageInfo'>
+                  <div className='HomeImageInfo'>
                     {images.image1.blurb}
-                  </p>
+                  </div>
                 }
               </div>
               <div
                 style={{
-                  backgroundImage: 'url(' + this.state.image2Src + ')',
+                  backgroundImage: 'url(' + (images.image2 && images.image2.url) || '' + ')',
                   backgroundSize: 'cover'
                 }}
                 className='HomeImage'
               >
                 {images.image2 && images.image2.blurb &&
-                  <p className='HomeImageInfo'>
+                  <div className='HomeImageInfo'>
                     {images.image2.blurb}
-                  </p>
+                  </div>
                 }
               </div>
               <div
                 style={{
-                  backgroundImage: 'url(' + this.state.image3Src + ')',
+                  backgroundImage: 'url(' + (images.image3 && images.image3.url) || '' + ')',
                   backgroundSize: 'cover'
                 }}
                 className='HomeImage'
               >
                 {images.image3 && images.image3.blurb &&
-                  <p className='HomeImageInfo'>
+                  <div className='HomeImageInfo'>
                     {images.image3.blurb}
-                  </p>
+                  </div>
                 }
               </div>
               <div
                 style={{
-                  backgroundImage: 'url(' + this.state.image4Src + ')',
+                  backgroundImage: 'url(' + (images.image4 && images.image4.url) || '' + ')',
                   backgroundSize: 'cover'
                 }}
                 className='HomeImage'
               >
                 {images.image4 && images.image4.blurb &&
-                  <p className='HomeImageInfo'>
+                  <div className='HomeImageInfo'>
                     {images.image4.blurb}
-                  </p>
+                  </div>
                 }
               </div>
             </div>
