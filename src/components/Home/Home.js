@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Element } from 'react-scroll'
 import ScrollTrigger from 'react-scroll-trigger'
+// import Moment from 'react-moment';
 
 import logo from 'images/logo.png'
 import Loader from 'components/Loader'
@@ -25,6 +26,10 @@ class Home extends Component {
           image2: {},
           image3: {},
           image4: {}
+        },
+        events: {
+          title: '',
+          list: []
         }
       },
       showLogo: false,
@@ -120,7 +125,7 @@ class Home extends Component {
       : 'HomeImages'
 
     const {isLoading, data} = this.state
-    const {about, images} = data
+    const {about, images, events} = data
 
     return (
       <div className='Home'>
@@ -181,17 +186,13 @@ class Home extends Component {
               </Loader>
             }
             <Element name='events'>
-              <h2>Hi, I am Portia EVENTS</h2>
+              <h2>{events.title}</h2>
             </Element>
-            <p>
-              Piquant is my definition of how I make food. This is bcdhiaoch dio
-              ahco adhcoh dsoch sodch iodshc ohdsoichdiosch iohds cj</p>
-            <p>
-              Piquant is my definition of how I make food dsico jsdoj
-              ciosd jcijsdocjsdioc jsdjcos djc dsjoc jdsiocj siojcosi.
-            </p>
-            <p>Hope to see you enjoying my food soon!</p>
-            <div>some pictures here</div>
+            {events.list.map((evt, index) => (
+              <div key={index}>
+                {evt.desc}
+              </div>
+            ))}
           </div>
         </ScrollTrigger>
         <ScrollTrigger triggerOnLoad={false} onEnter={() => this.showSections('contact')}>

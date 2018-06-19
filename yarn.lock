@@ -6000,6 +6000,10 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
+react-moment@^0.7.6:
+  version "0.7.6"
+  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.7.6.tgz#d94e63fe47d07fb794a7fa96a89711e834496c4a"
+
 react-scroll-trigger@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/react-scroll-trigger/-/react-scroll-trigger-0.3.3.tgz#48d84d4eadfada60d2b110eccd0fc2b0dc4dbf7f"

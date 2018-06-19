@@ -52,5 +52,6 @@
   padding: 10px 20px;
   position: absolute;
   opacity: 0;
-  top: 5px;
+  top: 50%;
+  transform: translateY(-50%);
 }
