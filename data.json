@@ -25,21 +25,24 @@
       "blurb": "Poached pear steeped in cinnamon, star anise, cardamon infused sorrel, with Creme Anglaise topped with crushed Meringue & Pistachios"
     }
   },
-  "events": [
-    {
-      "eventDate": "2018-06-22 16:30",
-      "eventDesc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
-      "eventUrl": ""
-    },
-    {
-      "eventDate": "2018-06-23 16:30",
-      "eventDesc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
-      "eventUrl": ""
-    },
-    {
-      "eventDate": "2018-06-24 16:30",
-      "eventDesc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
-      "eventUrl": ""
-    }
-  ]
+  "events": {
+    "title": "Where and when to eat at Piquant",
+    "list": [
+      {
+        "eventDate": "2018-06-22 16:30",
+        "eventDesc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
+        "eventUrl": ""
+      },
+      {
+        "eventDate": "2018-06-23 16:30",
+        "eventDesc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
+        "eventUrl": ""
+      },
+      {
+        "eventDate": "2018-06-24 16:30",
+        "eventDesc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
+        "eventUrl": ""
+      }
+    ]
+  }
 }
