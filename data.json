@@ -29,19 +29,19 @@
     "title": "Where and when to eat at Piquant",
     "list": [
       {
-        "eventDate": "2018-06-22 16:30",
-        "eventDesc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
-        "eventUrl": ""
+        "date": "2018-06-22 16:30",
+        "desc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
+        "url": ""
       },
       {
-        "eventDate": "2018-06-23 16:30",
-        "eventDesc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
-        "eventUrl": ""
+        "date": "2018-06-23 16:30",
+        "desc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
+        "url": ""
       },
       {
-        "eventDate": "2018-06-24 16:30",
-        "eventDesc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
-        "eventUrl": ""
+        "date": "2018-06-24 16:30",
+        "desc": "Buns & beers at GOLD Galerie in Neukölln, Day 1",
+        "url": ""
       }
     ]
   }
