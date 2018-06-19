@@ -18,7 +18,7 @@ class Home extends Component {
     this.state = {
       data: {
         about: {
-          title: "Hi there!",
+          title: 'Hi there!',
           paragraphs: []
         },
         images: {
