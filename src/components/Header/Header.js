@@ -20,6 +20,7 @@ class Header extends Component {
   }
 
   closeMenu() {
+    console.log('jcidjcodjsocijdscj')
     this.setState({
       menuOpen: false
     })
@@ -39,27 +40,23 @@ class Header extends Component {
             <Button text={'Menu'} clicked={this.state.menuOpen} />
           </div>
           <div className={menuClass}>
-            <div onClick={this.closeMenu}>
-              <Link to='about' smooth duration={800}>
-                <Button text={'About Me'} />
-              </Link>
-            </div>
-            <div
+            <Link to='about' smooth duration={800} offset={-100}
+              onClick={this.closeMenu}
+            >
+              <Button text={'About Me'} />
+            </Link>
+            <Link to='events' smooth duration={800} offset={-100}
               className='HeaderButton'
               onClick={this.closeMenu}
             >
-              <Link to='futureevents' smooth duration={800}>
-                <Button text={'Future Events'} />
-              </Link>
-            </div>
-            <div
+              <Button text={'Future Events'} />
+            </Link>
+            <Link to='contact' smooth duration={800} offset={-100}
               className='HeaderButton'
               onClick={this.closeMenu}
             >
-              <Link to='contact' smooth duration={800}>
-                <Button text={'Get In Touch'} />
-              </Link>
-            </div>
+              <Button text={'Get In Touch'} />
+            </Link>
           </div>
         </div>
       </div>

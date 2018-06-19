@@ -1,6 +1,11 @@
 @import 'globals.scss';
 
 .HeartIcon {
+  @include transitions(transform)
   fill: $color-pale-pink;
   width: 10px;
+
+  &:hover {
+    transform: rotate(20deg);
+  }
 }

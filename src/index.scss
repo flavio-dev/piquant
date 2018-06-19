@@ -45,8 +45,23 @@ h2 {
     }
 }
 
+h3 {
+    font-size: medium;
+
+    @media #{$medium-and-up} {
+      font-size: large;
+    }
+
+    @media #{$large-and-up} {
+      font-size: x-large;
+    }
+}
+
 a {
-  text-decoration: none;
+  color: $color-quiet-black;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 p {

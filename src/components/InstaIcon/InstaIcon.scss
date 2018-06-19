@@ -1,7 +1,28 @@
 @import "globals.scss";
 
 .InstaIcon {
+  @include transitions(transform)
   fill: $color-pale-pink;
   height: 40px;
   width: 40px;
+
+  &:hover {
+    transform: rotate(20deg);
+  }
+}
+
+.InstaIconReverse {
+  fill: $color-quiet-black;
+}
+
+.InstaIconResponsive {
+  @media #{$medium-and-up} {
+    height: 50px;
+    width: 50px;
+  }
+
+  @media #{$large-and-up} {
+    height: 60px;
+    width: 60px;
+  }
 }
