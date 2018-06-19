@@ -41,7 +41,7 @@ class Header extends Component {
           <div className={menuClass}>
             <div onClick={this.closeMenu}>
               <Link to='about' smooth duration={800}>
-                <Button text={'About'} />
+                <Button text={'About Me'} />
               </Link>
             </div>
             <div
@@ -57,7 +57,7 @@ class Header extends Component {
               onClick={this.closeMenu}
             >
               <Link to='contact' smooth duration={800}>
-                <Button text={'Contact'} />
+                <Button text={'Get In Touch'} />
               </Link>
             </div>
           </div>

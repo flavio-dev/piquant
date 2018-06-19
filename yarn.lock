@@ -1535,6 +1535,10 @@ clean-css@4.1.x:
   dependencies:
     source-map "0.5.x"
 
+clean-react-props@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/clean-react-props/-/clean-react-props-0.2.4.tgz#06b6b199c5d65918c6319f1c9068c61cf15eece6"
+
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -5995,6 +5999,14 @@ react-dom@^16.4.1:
 react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
+
+react-scroll-trigger@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/react-scroll-trigger/-/react-scroll-trigger-0.3.3.tgz#48d84d4eadfada60d2b110eccd0fc2b0dc4dbf7f"
+  dependencies:
+    clean-react-props "^0.2.4"
+    lodash.throttle "^4.1.1"
+    prop-types "^15.6.1"
 
 react-scroll@^1.7.9:
   version "1.7.9"
