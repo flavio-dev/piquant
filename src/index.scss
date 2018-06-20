@@ -68,3 +68,26 @@ p {
   @include paragraphs();
   line-height: 1.5;
 }
+
+input[type="text"],
+input[type="name"],
+input[type="email"],
+textarea {
+  @include transitions(border);
+  background-color: $color-pale-pink;
+  border: 2px solid $color-quiet-black-transparent;
+  border-radius: 5px;
+  padding: 10px 15px;
+
+  &:focus {
+    border-color: $color-quiet-black;
+  }
+
+  &::placeholder {
+    color: $color-quiet-black-transparent;
+  }
+}
+
+button {
+  @include buttons();
+}

@@ -1,17 +1,5 @@
 @import "globals.scss";
 
 .Button {
-  @include transitions(all);
-  background-color: $color-quiet-black;
-  border: 5px solid $color-quiet-black;
-  border-radius: 5px;
-  color: $color-pale-pink;
-  cursor: pointer;
-  padding: 5px 10px;
-
-  &:hover,
-  &.ButtonClicked {
-    background-color: $color-pale-pink;
-    color: $color-quiet-black;
-  }
+  @include buttons();
 }

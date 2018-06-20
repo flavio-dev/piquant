@@ -118,7 +118,8 @@
 }
 
 .HomeInsta,
-.HomeEventsTitle {
+.HomeEventsTitle,
+.HomeContact {
   @extend %InnerSectionMargins;
 }
 
@@ -128,4 +129,46 @@
 
 .HomeEventsPast {
   text-decoration: line-through;
+}
+
+.HomeContact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  input, textarea {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  @media #{$medium-and-up} {
+    textarea {
+      max-width: 500px;
+    }
+  }
+
+  @media #{$large-and-up} {
+    textarea {
+      max-width: 600px;
+    }
+  }
+}
+
+.HomeContactNameEmail {
+  width: 100%;
+
+  @media #{$medium-and-up} {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+
+    input {
+      width: 48%;
+    }
+  }
+
+  @media #{$large-and-up} {
+    max-width: 600px;
+  }
 }

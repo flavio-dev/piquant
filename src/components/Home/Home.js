@@ -260,17 +260,19 @@ class Home extends Component {
               </Loader>
             }
             <Element name='contact'>
-              <h2>Hi, I am Portia CONTACT</h2>
+              <h2>Want to get in touch?</h2>
             </Element>
-            <p>
-              Piquant is my definition of how I make food. This is bcdhiaoch dio
-              ahco adhcoh dsoch sodch iodshc ohdsoichdiosch iohds cj</p>
-            <p>
-              Piquant is my definition of how I make food dsico jsdoj
-              ciosd jcijsdocjsdioc jsdjcos djc dsjoc jdsiocj siojcosi.
-            </p>
-            <p>Hope to see you enjoying my food soon!</p>
-            <div>some pictures here</div>
+            <p>Please fill up this form, I will try to get back to you as soon as I can.</p>
+            <form method='POST' action='https://formspree.io/myshoestravel@gmail.com'>
+              <div className='HomeContact'>
+                <div className='HomeContactNameEmail'>
+                  <input type='name' name='name' placeholder='Your name*' />
+                  <input type='email' name='email' placeholder='Your email*' />
+                </div>
+                <textarea name='message' placeholder='Your message' rows='4' />
+              </div>
+              <button type='submit'>Send</button>
+            </form>
           </div>
         </ScrollTrigger>
       </div>
