@@ -41,3 +41,15 @@ $height-header-big: 95px;
 @mixin transitions($property, $timing-function: ease) {
     transition: $property .3s $timing-function;
 }
+
+@mixin paragraphs() {
+  margin-top: 20px;
+
+  @media #{$medium-and-up} {
+    margin-top: 25px;
+  }
+
+  @media #{$large-and-up} {
+    margin-top: 30px;
+  }
+}

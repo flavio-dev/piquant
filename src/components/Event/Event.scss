@@ -1,5 +1,9 @@
 @import 'globals.scss';
 
+.EventWrapper {
+  @include paragraphs();
+}
+
 .Event {
   display: flex;
   flex-wrap: wrap;

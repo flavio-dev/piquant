@@ -29,10 +29,10 @@ export const EventPiquant = ({
   )
 
   return (
-    <p>
+    <div className='EventWrapper'>
       {url && url.length && EventLineLink}
       {(!url || !url.length) && EventLine}
-    </p>
+    </div>
   )
 }
 

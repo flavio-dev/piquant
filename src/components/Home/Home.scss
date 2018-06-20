@@ -12,7 +12,19 @@
   }
 }
 
-%TitlePaddings {
+%InnerSectionMargins {
+  margin-top: 20px;
+
+  @media #{$medium-and-up} {
+    margin-top: 25px;
+  }
+
+  @media #{$large-and-up} {
+    margin-top: 30px;
+  }
+}
+
+%BottomPaddings {
   padding-bottom: 10px;
 
   @media #{$medium-and-up} {
@@ -61,28 +73,16 @@
   }
 
   h2 {
-    @extend %TitlePaddings;
-  }
-
-  p {
-    margin-top: 20px;
-
-    @media #{$medium-and-up} {
-      margin-top: 25px;
-    }
-
-    @media #{$large-and-up} {
-      margin-top: 30px;
-    }
+    @extend %BottomPaddings;
   }
 }
 
 .HomeImages {
   @include slow-transitions(all);
+  @extend %InnerSectionMargins;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
   opacity: 0;
   position: relative;
   top: 30px;
@@ -101,11 +101,6 @@
 
   @media #{$medium-and-up} {
     justify-content: space-between;
-    margin-top: 25px;
-  }
-
-  @media #{$large-and-up} {
-    margin-top: 30px;
   }
 }
 
@@ -123,14 +118,14 @@
 }
 
 .HomeInsta,
-.HomeEventTitle {
-  margin-top: 20px;
+.HomeEventsTitle {
+  @extend %InnerSectionMargins;
+}
 
-  @media #{$medium-and-up} {
-    margin-top: 25px;
-  }
+.HomeEventsBottomSpace {
+  @extend %BottomPaddings;
+}
 
-  @media #{$large-and-up} {
-    margin-top: 30px;
-  }
+.HomeEventsPast {
+  text-decoration: line-through;
 }

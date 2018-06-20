@@ -135,7 +135,6 @@ class Home extends Component {
 
     const {isLoading, data} = this.state
     const {about, images, events, sortedEvents} = data
-    console.log('sortedEvents = ', sortedEvents)
 
     return (
       <div className='Home'>
@@ -218,8 +217,8 @@ class Home extends Component {
             <Element name='events'>
               <h2>{events.title}</h2>
             </Element>
-            <h3 className='HomeEventTitle'>Future Events</h3>
-            <div>
+            <h3 className='HomeEventsTitle'>Future Events</h3>
+            <div className={sortedEvents.pastEvents.length && 'HomeEventsBottomSpace'}>
               {!sortedEvents.futureEvents.length && <p>No upcoming events.</p>}
               {sortedEvents.futureEvents.map((evt, index) => {
                 return (
@@ -235,8 +234,8 @@ class Home extends Component {
             </div>
             {sortedEvents.pastEvents.length > 0 &&
               <Fragment>
-                <h3 className='HomeEventTitle HomeEventTitle'>Past Events</h3>
-                <div>
+                <h3 className='HomeEventsTitle'>Past Events</h3>
+                <div className='HomeEventsPast'>
                   {sortedEvents.pastEvents.map((evt, index) => {
                     return (
                       <EventPiquant key={index}
