@@ -17,8 +17,8 @@
   }
 
   @media #{$large-and-up} {
-    padding-top: 24%;
-    width: 24%;
+    padding-top: 32%;
+    width: 32%;
   }
 
   &:after {
@@ -49,9 +49,10 @@
 
 .ImageInfo {
   @include transitions(all);
-  padding: 10px 20px;
+  left: 50%;
   position: absolute;
   opacity: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  width: 90%;
 }

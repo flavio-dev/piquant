@@ -25,7 +25,9 @@ class Home extends Component {
           image1: {},
           image2: {},
           image3: {},
-          image4: {}
+          image4: {},
+          image5: {},
+          image6: {}
         },
         events: {
           title: '',
@@ -167,6 +169,14 @@ class Home extends Component {
               <Image
                 url={(images.image4 && images.image4.url) || ''}
                 blurb={(images.image4 && images.image4.blurb) || ''}
+              />
+              <Image
+                url={(images.image5 && images.image5.url) || ''}
+                blurb={(images.image5 && images.image5.blurb) || ''}
+              />
+              <Image
+                url={(images.image6 && images.image6.url) || ''}
+                blurb={(images.image6 && images.image6.blurb) || ''}
               />
             </div>
             <div className='HomeInsta'>

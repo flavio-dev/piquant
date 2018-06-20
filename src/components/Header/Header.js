@@ -20,7 +20,6 @@ class Header extends Component {
   }
 
   closeMenu() {
-    console.log('jcidjcodjsocijdscj')
     this.setState({
       menuOpen: false
     })
