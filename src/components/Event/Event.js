@@ -14,7 +14,7 @@ export const EventPiquant = ({
     <div>
       <span className='EventLong'>{dateLongOfEvent} from {timeOfEvent}</span>
       <span className='EventShort'>{dateShortOfEvent} - {timeOfEvent}</span>
-      <span className='EventDesc'>{desc}</span>
+      <span className='EventDesc'>// {desc}</span>
     </div>
   )
 
@@ -23,7 +23,7 @@ export const EventPiquant = ({
       <div className='Event'>
         <span className='EventLong'>{dateLongOfEvent} from {timeOfEvent}</span>
         <span className='EventShort'>{dateShortOfEvent} - {timeOfEvent}</span>
-        <span className='EventDesc'>{desc}</span>
+        <span className='EventDesc'>// {desc}</span>
       </div>
     </a>
   )
