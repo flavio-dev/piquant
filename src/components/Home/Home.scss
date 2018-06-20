@@ -12,6 +12,18 @@
   }
 }
 
+%TitlePaddings {
+  padding-bottom: 10px;
+
+  @media #{$medium-and-up} {
+    padding-bottom: 15px;
+  }
+
+  @media #{$large-and-up} {
+    padding-bottom: 20px;
+  }
+}
+
 .Home {
   margin-top: 10px;
   text-align: center;
@@ -49,15 +61,7 @@
   }
 
   h2 {
-    padding-bottom: 10px;
-
-    @media #{$medium-and-up} {
-      padding-bottom: 15px;
-    }
-
-    @media #{$large-and-up} {
-      padding-bottom: 20px;
-    }
+    @extend %TitlePaddings;
   }
 
   p {
@@ -88,6 +92,13 @@
     top: 0px;
   }
 
+  @media #{$small-and-down} {
+    .HomeImageWrapper:last-child,
+    .HomeImageWrapper:nth-last-child(2) {
+      display: none;
+    }
+  }
+
   @media #{$medium-and-up} {
     justify-content: space-between;
     margin-top: 25px;
@@ -98,7 +109,21 @@
   }
 }
 
-.HomeInsta {
+.HomeImageWrapper {
+  margin-top: 4%;
+  width: 90%;
+
+  @media #{$medium-and-up} {
+    width: 48%;
+  }
+
+  @media #{$large-and-up} {
+    width: 32%;
+  }
+}
+
+.HomeInsta,
+.HomeEventTitle {
   margin-top: 20px;
 
   @media #{$medium-and-up} {

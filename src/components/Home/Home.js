@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Element } from 'react-scroll'
 import ScrollTrigger from 'react-scroll-trigger'
-// import Moment from 'react-moment';
 
 import logo from 'images/logo.png'
 import Loader from 'components/Loader'
 import Image from 'components/Image'
 import InstaIcon from 'components/InstaIcon'
 import BunIcon from 'components/BunIcon'
+import EventPiquant from 'components/Event'
 import whatwgFetch from 'utils/fetch'
+import sortEvents from 'utils/sortEvents'
 
 import './Home.css'
 
@@ -32,6 +33,10 @@ class Home extends Component {
         events: {
           title: '',
           list: []
+        },
+        sortedEvents: {
+          futureEvents: [],
+          pastEvents: []
         }
       },
       showLogo: false,
@@ -98,8 +103,10 @@ class Home extends Component {
   componentDidMount() {
     whatwgFetch('https://raw.githubusercontent.com/flavio-dev/piquant/master/data.json')
       .then(res => {
+        const sortedEvents = sortEvents(res.events.list)
+        const newData = Object.assign({}, res, sortedEvents)
         this.setState({
-          data: res,
+          data: newData,
           isLoading: false
         })
       })
@@ -127,7 +134,8 @@ class Home extends Component {
       : 'HomeImages'
 
     const {isLoading, data} = this.state
-    const {about, images, events} = data
+    const {about, images, events, sortedEvents} = data
+    console.log('sortedEvents = ', sortedEvents)
 
     return (
       <div className='Home'>
@@ -140,7 +148,7 @@ class Home extends Component {
         <div className={sectionAboutClass}>
           {isLoading &&
             <Loader>
-              <BunIcon rotate />
+              <BunIcon />
             </Loader>
           }
           <Element name='about'>
@@ -154,30 +162,42 @@ class Home extends Component {
             onEnter={this.showImages}
           >
             <div className={imagesClass}>
-              <Image
-                url={(images.image1 && images.image1.url) || ''}
-                blurb={(images.image1 && images.image1.blurb) || ''}
-              />
-              <Image
-                url={(images.image2 && images.image2.url) || ''}
-                blurb={(images.image2 && images.image2.blurb) || ''}
-              />
-              <Image
-                url={(images.image3 && images.image3.url) || ''}
-                blurb={(images.image3 && images.image3.blurb) || ''}
-              />
-              <Image
-                url={(images.image4 && images.image4.url) || ''}
-                blurb={(images.image4 && images.image4.blurb) || ''}
-              />
-              <Image
-                url={(images.image5 && images.image5.url) || ''}
-                blurb={(images.image5 && images.image5.blurb) || ''}
-              />
-              <Image
-                url={(images.image6 && images.image6.url) || ''}
-                blurb={(images.image6 && images.image6.blurb) || ''}
-              />
+              <div className='HomeImageWrapper'>
+                <Image
+                  url={(images.image1 && images.image1.url) || ''}
+                  blurb={(images.image1 && images.image1.blurb) || ''}
+                />
+              </div>
+              <div className='HomeImageWrapper'>
+                <Image
+                  url={(images.image2 && images.image2.url) || ''}
+                  blurb={(images.image2 && images.image2.blurb) || ''}
+                />
+              </div>
+              <div className='HomeImageWrapper'>
+                <Image
+                  url={(images.image3 && images.image3.url) || ''}
+                  blurb={(images.image3 && images.image3.blurb) || ''}
+                />
+              </div>
+              <div className='HomeImageWrapper'>
+                <Image
+                  url={(images.image4 && images.image4.url) || ''}
+                  blurb={(images.image4 && images.image4.blurb) || ''}
+                />
+              </div>
+              <div className='HomeImageWrapper'>
+                <Image
+                  url={(images.image5 && images.image5.url) || ''}
+                  blurb={(images.image5 && images.image5.blurb) || ''}
+                />
+              </div>
+              <div className='HomeImageWrapper'>
+                <Image
+                  url={(images.image6 && images.image6.url) || ''}
+                  blurb={(images.image6 && images.image6.blurb) || ''}
+                />
+              </div>
             </div>
             <div className='HomeInsta'>
               <a href='https://www.instagram.com/eatatpiquant/' target='_blank'>
@@ -192,24 +212,52 @@ class Home extends Component {
           <div className={sectionEventClass}>
             {isLoading &&
               <Loader>
-                <BunIcon rotate />
+                <BunIcon />
               </Loader>
             }
             <Element name='events'>
               <h2>{events.title}</h2>
             </Element>
-            {events.list.map((evt, index) => (
-              <div key={index}>
-                {evt.desc}
-              </div>
-            ))}
+            <h3 className='HomeEventTitle'>Future Events</h3>
+            <div>
+              {!sortedEvents.futureEvents.length && <p>No upcoming events.</p>}
+              {sortedEvents.futureEvents.map((evt, index) => {
+                return (
+                  <EventPiquant key={index}
+                    url={evt.url}
+                    dateLongOfEvent={evt.dateLongOfEvent}
+                    dateShortOfEvent={evt.dateShortOfEvent}
+                    desc={evt.desc}
+                    timeOfEvent={evt.timeOfEvent}
+                  />
+                )
+              })}
+            </div>
+            {sortedEvents.pastEvents.length > 0 &&
+              <Fragment>
+                <h3 className='HomeEventTitle HomeEventTitle'>Past Events</h3>
+                <div>
+                  {sortedEvents.pastEvents.map((evt, index) => {
+                    return (
+                      <EventPiquant key={index}
+                        url={evt.url}
+                        dateLongOfEvent={evt.dateLongOfEvent}
+                        dateShortOfEvent={evt.dateShortOfEvent}
+                        desc={evt.desc}
+                        timeOfEvent={evt.timeOfEvent}
+                      />
+                    )
+                  })}
+                </div>
+              </Fragment>
+            }
           </div>
         </ScrollTrigger>
         <ScrollTrigger triggerOnLoad={false} onEnter={() => this.showSections('contact')}>
           <div className={sectionContactClass}>
             {isLoading &&
               <Loader>
-                <BunIcon rotate />
+                <BunIcon />
               </Loader>
             }
             <Element name='contact'>

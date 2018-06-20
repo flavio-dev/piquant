@@ -4,22 +4,10 @@
   background-color: $color-quiet-black-transparent;
   border-radius: 10%;
   color: $color-pale-pink;
-  margin-top: 4%;
-  max-height: 500px;
   max-width: 500px;
   padding-top: 100%;
   position: relative;
   width: 100%;
-
-  @media #{$medium-and-up} {
-    padding-top: 48%;
-    width: 48%;
-  }
-
-  @media #{$large-and-up} {
-    padding-top: 32%;
-    width: 32%;
-  }
 
   &:after {
     @include transitions(all);

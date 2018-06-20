@@ -1,0 +1,28 @@
+@import 'globals.scss';
+
+.Event {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.EventLong,
+.EventShort {
+  white-space: nowrap;
+}
+
+.EventLong {
+  @media #{$small-and-down} {
+    display: none;
+  }
+}
+
+.EventShort {
+  @media #{$medium-and-up} {
+    display: none;
+  }
+}
+
+.EventDesc {
+  margin-left: 15px;
+}
