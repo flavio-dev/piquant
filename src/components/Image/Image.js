@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import './Image.css'
 
 export const Image = ({url, blurb}) => {
-  console.log('blurb = ', blurb)
   return (
     <div
       style={{

@@ -23,6 +23,14 @@
     "image4": {
       "url": "https://github.com/flavio-dev/piquant/raw/master/images/04.jpg",
       "blurb": "Poached pear steeped in cinnamon, star anise, cardamon infused sorrel, with Creme Anglaise topped with crushed Meringue & Pistachios"
+    },
+    "image5": {
+      "url": "https://github.com/flavio-dev/piquant/raw/master/images/05.jpg",
+      "blurb": "Spinach bao bun filled with bulgogi mushrooms"
+    },
+    "image6": {
+      "url": "https://github.com/flavio-dev/piquant/raw/master/images/06.jpg",
+      "blurb": "Steamed flavoured bao buns"
     }
   },
   "events": {
