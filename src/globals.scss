@@ -68,4 +68,8 @@ $height-header-big: 95px;
     background-color: $color-pale-pink;
     color: $color-quiet-black;
   }
+
+  @media #{$small-and-down} {
+    font-size: medium;
+  }
 }

@@ -37,6 +37,9 @@ class Home extends Component {
         sortedEvents: {
           futureEvents: [],
           pastEvents: []
+        },
+        contact: {
+          title: ''
         }
       },
       showLogo: false,
@@ -104,7 +107,7 @@ class Home extends Component {
     whatwgFetch('https://raw.githubusercontent.com/flavio-dev/piquant/master/data.json')
       .then(res => {
         const sortedEvents = sortEvents(res.events.list)
-        const newData = Object.assign({}, res, sortedEvents)
+        const newData = Object.assign({}, this.state.data, res, sortedEvents)
         this.setState({
           data: newData,
           isLoading: false
@@ -134,7 +137,8 @@ class Home extends Component {
       : 'HomeImages'
 
     const {isLoading, data} = this.state
-    const {about, images, events, sortedEvents} = data
+    const {about, images, events, sortedEvents, contact} = data
+    console.log('contact = ', contact)
 
     return (
       <div className='Home'>
@@ -260,13 +264,13 @@ class Home extends Component {
               </Loader>
             }
             <Element name='contact'>
-              <h2>Want to get in touch?</h2>
+              <h2>{contact.title}</h2>
             </Element>
             <p>Please fill up this form, I will try to get back to you as soon as I can.</p>
             <form method='POST' action='https://formspree.io/myshoestravel@gmail.com'>
               <div className='HomeContact'>
                 <div className='HomeContactNameEmail'>
-                  <input type='name' name='name' placeholder='Your name*' />
+                  <input type='name' name='name' placeholder='Your name' />
                   <input type='email' name='email' placeholder='Your email*' />
                 </div>
                 <textarea name='message' placeholder='Your message' rows='4' />
