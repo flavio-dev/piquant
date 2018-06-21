@@ -1,0 +1,26 @@
+@import 'globals.scss';
+
+.Separator {
+  @include sections();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  hr {
+      display: block;
+      border: 0;
+      border-top: 1px solid $color-quiet-black;
+      height: 1px;
+      margin: 0 10px;
+      padding: 0;
+      width: 30px;
+
+      @media #{$medium-and-up} {
+        width: 80px;
+      }
+
+      @media #{$large-and-up} {
+        width: 120px;
+      }
+  }
+}

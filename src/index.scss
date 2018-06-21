@@ -91,3 +91,7 @@ textarea {
 button {
   @include buttons();
 }
+
+section {
+    @include sections();
+}

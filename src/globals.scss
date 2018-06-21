@@ -73,3 +73,15 @@ $height-header-big: 95px;
     font-size: medium;
   }
 }
+
+@mixin sections() {
+  margin-bottom: 60px;
+
+  @media #{$medium-and-up} {
+    margin-bottom: 90px;
+  }
+
+  @media #{$large-and-up} {
+    margin-bottom: 110px;
+  }
+}

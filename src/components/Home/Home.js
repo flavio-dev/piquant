@@ -7,7 +7,9 @@ import Loader from 'components/Loader'
 import Image from 'components/Image'
 import InstaIcon from 'components/InstaIcon'
 import BunIcon from 'components/BunIcon'
+import BaoIcon from 'components/BaoIcon'
 import EventPiquant from 'components/Event'
+import Separator from 'components/Separator'
 import whatwgFetch from 'utils/fetch'
 import sortEvents from 'utils/sortEvents'
 
@@ -138,7 +140,6 @@ class Home extends Component {
 
     const {isLoading, data} = this.state
     const {about, images, events, sortedEvents, contact} = data
-    console.log('contact = ', contact)
 
     return (
       <div className='Home'>
@@ -148,7 +149,7 @@ class Home extends Component {
           onLoad={this.handleLogoLoaded}
           onError={this.handleLogoLoadedError}
         />
-        <div className={sectionAboutClass}>
+        <section className={sectionAboutClass}>
           {isLoading &&
             <Loader>
               <BunIcon />
@@ -209,10 +210,14 @@ class Home extends Component {
               </a>
             </div>
           </ScrollTrigger>
-        </div>
+        </section>
+
+        <Separator>
+          <BunIcon />
+        </Separator>
 
         <ScrollTrigger triggerOnLoad={false} onEnter={() => this.showSections('events')}>
-          <div className={sectionEventClass}>
+          <section className={sectionEventClass}>
             {isLoading &&
               <Loader>
                 <BunIcon />
@@ -254,10 +259,15 @@ class Home extends Component {
                 </div>
               </Fragment>
             }
-          </div>
+          </section>
         </ScrollTrigger>
+
+        <Separator>
+          <BaoIcon />
+        </Separator>
+
         <ScrollTrigger triggerOnLoad={false} onEnter={() => this.showSections('contact')}>
-          <div className={sectionContactClass}>
+          <section className={sectionContactClass}>
             {isLoading &&
               <Loader>
                 <BunIcon />
@@ -277,7 +287,7 @@ class Home extends Component {
               </div>
               <button type='submit'>Send</button>
             </form>
-          </div>
+          </section>
         </ScrollTrigger>
       </div>
     )
