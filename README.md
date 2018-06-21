@@ -1,1 +1,1 @@
-(Piquant)[https://www.eatatpiquant.com]
+[Piquant](https://www.eatatpiquant.com)
