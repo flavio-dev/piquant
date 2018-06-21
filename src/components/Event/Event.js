@@ -19,7 +19,7 @@ export const EventPiquant = ({
   )
 
   const EventLineLink = (
-    <a href={url}>
+    <a href={url} target='_blank'>
       <div className='Event'>
         <span className='EventLong'>{dateLongOfEvent} from {timeOfEvent}</span>
         <span className='EventShort'>{dateShortOfEvent} - {timeOfEvent}</span>

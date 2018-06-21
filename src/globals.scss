@@ -63,7 +63,6 @@ $height-header-big: 95px;
   cursor: pointer;
   padding: 5px 10px;
 
-  &:hover,
   &.ButtonClicked {
     background-color: $color-pale-pink;
     color: $color-quiet-black;
@@ -71,6 +70,13 @@ $height-header-big: 95px;
 
   @media #{$small-and-down} {
     font-size: medium;
+  }
+
+  @media #{$medium-and-up} {
+    &:hover {
+      background-color: $color-pale-pink;
+      color: $color-quiet-black;
+    }
   }
 }
 

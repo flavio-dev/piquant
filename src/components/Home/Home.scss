@@ -35,7 +35,7 @@
 
 .HomeLogo {
   @include slow-transitions(all);
-  @extend %SectionMargins;
+  @include sections();
   margin-top: 30px;
   max-width: 600px;
   opacity: 0;
@@ -50,7 +50,6 @@
 .HomeSection {
   @include default-wrapper-width();
   @include slow-transitions(all)
-  @extend %SectionMargins;
   opacity: 0;
   position: relative;
   top: 30px;
