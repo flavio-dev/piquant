@@ -14,7 +14,7 @@ export const Footer = () => (
         </a>
       </div>
       <div className='FooterInfo'>
-        <div>made with <HeartIcon /> by <a href='https://github.com/flavio-dev'>flaviø</a></div>
+        <div>made with <HeartIcon /> by <a href='https://github.com/flavio-dev' target='_blank'>flaviø</a></div>
         <div>copyrights 2018</div>
       </div>
     </div>
