@@ -41,7 +41,8 @@ class Home extends Component {
           pastEvents: []
         },
         contact: {
-          title: ''
+          title: '',
+          paragraphs: []
         }
       },
       showLogo: false,
@@ -276,7 +277,9 @@ class Home extends Component {
             <Element name='contact'>
               <h2>{contact.title}</h2>
             </Element>
-            <p>Please fill up this form, I will try to get back to you as soon as I can.</p>
+            {contact.paragraphs.map((text, index) => (
+              <p key={index}>{text}</p>
+            ))}
             <form method='POST' action='https://formspree.io/myshoestravel@gmail.com'>
               <div className='HomeContact'>
                 <div className='HomeContactNameEmail'>

@@ -1,4 +1,4 @@
-{
+,{
   "about": {
     "title": "Hi, I'm Portia",
     "paragraphs": [
@@ -54,6 +54,7 @@
     ]
   },
   "contact": {
-    "title": "Want to get in touch?"
+    "title": "Want to get in touch?",
+    "paragraphs": ["Please fill up this form, I will try to get back to you as soon as I can."]
   }
 }
