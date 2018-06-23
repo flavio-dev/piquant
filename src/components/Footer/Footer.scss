@@ -22,3 +22,12 @@
     color: $color-pale-pink;
   }
 }
+
+.FooterInfoMadeBy {
+  align-items: center;
+  display: flex;
+
+  svg {
+    margin: 0 5px;
+  }
+}
