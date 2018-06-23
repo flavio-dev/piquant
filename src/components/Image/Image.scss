@@ -22,14 +22,16 @@
     width: 100%;
   }
 
-  &:hover:after,
-  &:focus:after {
+  &:focus:after,
+  &:hover:after
+  {
     opacity: 1;
     z-index: 1;
   }
 
-  &:hover .ImageInfo,
-  &:focus .ImageInfo {
+  &:focus .ImageInfo,
+  &:hover .ImageInfo
+  {
     opacity: 1;
     z-index: 2;
   }
