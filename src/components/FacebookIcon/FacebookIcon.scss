@@ -1,6 +1,6 @@
 @import "globals.scss";
 
-.InstaIcon {
+.FacebookIcon {
   @include transitions(transform)
   fill: $color-pale-pink;
   height: 30px;
@@ -11,11 +11,11 @@
   }
 }
 
-.InstaIconReverse {
+.FacebookIconReverse {
   fill: $color-quiet-black;
 }
 
-.InstaIconResponsive {
+.FacebookIconResponsive {
   @media #{$medium-and-up} {
     height: 30px;
     width: 30px;

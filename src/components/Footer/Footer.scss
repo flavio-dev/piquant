@@ -11,6 +11,10 @@
   @include default-wrapper-width();
 }
 
+.FooterSocial a {
+  margin-right: 10px;
+}
+
 .FooterInfo {
   align-items: center;
   display: flex;

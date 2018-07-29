@@ -3,6 +3,7 @@ import React from 'react'
 import './Footer.css'
 
 import InstaIcon from 'components/InstaIcon'
+import FacebookIcon from 'components/FacebookIcon'
 import HeartIcon from 'components/HeartIcon'
 
 export const Footer = () => (
@@ -11,6 +12,9 @@ export const Footer = () => (
       <div className='FooterSocial'>
         <a href='https://www.instagram.com/eatatpiquant/' target='_blank'>
           <InstaIcon />
+        </a>
+        <a href='https://www.facebook.com/eatatpiquant/' target='_blank'>
+          <FacebookIcon />
         </a>
       </div>
       <div className='FooterInfo'>
