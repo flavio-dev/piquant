@@ -5,6 +5,7 @@ import ScrollTrigger from 'react-scroll-trigger'
 import logo from 'images/logo.png'
 import Loader from 'components/Loader'
 import Image from 'components/Image'
+import ImagePano from 'components/ImagePano'
 import InstaIcon from 'components/InstaIcon'
 import BunIcon from 'components/BunIcon'
 import BaoIcon from 'components/BaoIcon'
@@ -22,6 +23,8 @@ class Home extends Component {
       data: {
         about: {
           title: '',
+          panoimagelarge: '',
+          panoimagesmall: '',
           paragraphs: []
         },
         images: {
@@ -46,19 +49,16 @@ class Home extends Component {
         }
       },
       showLogo: false,
+      showAboutText: false,
+      showImages: false,
       showSectionAbout: false,
       showSectionContact: false,
       showSectionEvents: false,
       isLoading: true
     }
-
-    this.handleLogoLoaded = this.handleLogoLoaded.bind(this)
-    this.handleLogoLoadedError = this.handleLogoLoadedError.bind(this)
-    this.showSections = this.showSections.bind(this)
-    this.showImages = this.showImages.bind(this)
   }
 
-  handleLogoLoaded() {
+  handleLogoLoaded = () => {
     this.setState({
       showLogo: true
     })
@@ -66,11 +66,17 @@ class Home extends Component {
     this.showSections('about')
   }
 
-  handleLogoLoadedError() {
+  handleLogoLoadedError = () => {
     this.showSections('about')
   }
 
-  showImages() {
+  showAboutText = () => {
+    this.setState({
+      showAboutText: true
+    })
+  }
+
+  showImages = () => {
     this.setState({
       showImages: true
     })
@@ -123,7 +129,15 @@ class Home extends Component {
       ? 'HomeLogo HomeLogoShow'
       : 'HomeLogo'
 
+    const panoAboutClass = this.state.showSectionAbout
+      ? 'HomeAbout HomeSectionShow'
+      : 'HomeAbout'
+
     const sectionAboutClass = this.state.showSectionAbout
+      ? 'HomeSection HomeSectionShow'
+      : 'HomeSection'
+
+    const textAboutClass = this.state.showAboutText
       ? 'HomeSection HomeSectionShow'
       : 'HomeSection'
 
@@ -150,18 +164,25 @@ class Home extends Component {
           onLoad={this.handleLogoLoaded}
           onError={this.handleLogoLoadedError}
         />
+        {isLoading &&
+          <Loader>
+            <BunIcon />
+          </Loader>
+        }
+        <Element name='about' className={panoAboutClass}>
+          <ImagePano urlSmall={about.panoimagesmall} urlLarge={about.panoimagelarge} title={about.title} />
+        </Element>
         <section className={sectionAboutClass}>
-          {isLoading &&
-            <Loader>
-              <BunIcon />
-            </Loader>
-          }
-          <Element name='about'>
-            <h2>{about.title}</h2>
-          </Element>
-          {about.paragraphs.map((text, index) => (
-            <p key={index}>{text}</p>
-          ))}
+          <ScrollTrigger
+            triggerOnLoad={false}
+            onEnter={this.showAboutText}
+          >
+            <div className={textAboutClass}>
+              {about.paragraphs.map((text, index) => (
+                <p key={index}>{text}</p>
+              ))}
+            </div>
+          </ScrollTrigger>
           <ScrollTrigger
             triggerOnLoad={false}
             onEnter={this.showImages}

@@ -1,0 +1,48 @@
+@import 'globals.scss';
+
+.ImagePano {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow:
+    inset 0px 11px 20px -8px $color-quiet-black-transparent,
+    inset 0px -11px 20px -8px $color-quiet-black-transparent;
+
+  h2 {
+    padding: 100px 0;
+  }
+
+  span {
+    background-color: $color-quiet-black-transparent;
+    border-radius: 5px;
+    color: $color-pale-pink;
+    padding: 15px 20px;
+  }
+
+  @media #{$medium-and-up} {
+    background-size: cover;
+
+    h2 {
+      padding: 200px 0;
+    }
+  }
+
+  @media #{$large-and-up} {
+
+    h2 {
+      padding: 300px 0;
+    }
+  }
+ }
+
+.ImagePanoSmall {
+  @media #{$medium-and-up} {
+    display: none;
+  }
+}
+
+.ImagePanoLarge {
+  @media #{$small-and-down} {
+    display: none;
+  }
+}
