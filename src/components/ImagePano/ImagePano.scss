@@ -36,13 +36,15 @@
  }
 
 .ImagePanoSmall {
-  @media #{$medium-and-up} {
-    display: none;
+  display: none;
+  @media #{$small-and-down} {
+    display: block;
   }
 }
 
 .ImagePanoLarge {
-  @media #{$small-and-down} {
-    display: none;
+  display: none;
+  @media #{$medium-and-up} {
+    display: block;
   }
 }

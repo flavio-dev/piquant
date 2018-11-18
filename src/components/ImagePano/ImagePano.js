@@ -6,21 +6,25 @@ import './ImagePano.css'
 export const ImagePano = ({urlSmall, urlLarge, title}) => {
   return (
     <Fragment>
-      <div
-        style={{
-          backgroundImage: 'url(' + urlLarge || '' + ')'
-        }}
-        className='ImagePano ImagePanoLarge'
-      >
-        <h2><span>{title}</span></h2>
+      <div className='ImagePanoLarge'>
+        <div
+          style={{
+            backgroundImage: 'url(' + urlLarge || '' + ')'
+          }}
+          className='ImagePano'
+        >
+          <h2><span>{title}</span></h2>
+        </div>
       </div>
-      <div
-        style={{
-          backgroundImage: 'url(' + urlSmall || '' + ')'
-        }}
-        className='ImagePano ImagePanoSmall'
-      >
-        <h2><span>{title}</span></h2>
+      <div className='ImagePanoSmall'>
+        <div
+          style={{
+            backgroundImage: 'url(' + urlSmall || '' + ')'
+          }}
+          className='ImagePano'
+        >
+          <h2><span>{title}</span></h2>
+        </div>
       </div>
     </Fragment>
   )
