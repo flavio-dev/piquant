@@ -7,8 +7,7 @@ import Loader from 'components/Loader'
 import Image from 'components/Image'
 import ImagePano from 'components/ImagePano'
 import InstaIcon from 'components/InstaIcon'
-import BunIcon from 'components/BunIcon'
-import BaoIcon from 'components/BaoIcon'
+import ChapatiIcon from 'components/ChapatiIcon'
 import EventPiquant from 'components/Event'
 import Separator from 'components/Separator'
 import whatwgFetch from 'utils/fetch'
@@ -166,7 +165,7 @@ class Home extends Component {
         />
         {isLoading &&
           <Loader>
-            <BunIcon />
+            <ChapatiIcon />
           </Loader>
         }
         <Element name='about' className={panoAboutClass}>
@@ -235,14 +234,14 @@ class Home extends Component {
         </section>
 
         <Separator>
-          <BunIcon />
+          <ChapatiIcon />
         </Separator>
 
         <ScrollTrigger triggerOnLoad={false} onEnter={() => this.showSections('events')}>
           <section className={sectionEventClass}>
             {isLoading &&
               <Loader>
-                <BunIcon />
+                <ChapatiIcon />
               </Loader>
             }
             <Element name='events'>
@@ -285,14 +284,14 @@ class Home extends Component {
         </ScrollTrigger>
 
         <Separator>
-          <BaoIcon />
+          <ChapatiIcon />
         </Separator>
 
         <ScrollTrigger triggerOnLoad={false} onEnter={() => this.showSections('contact')}>
           <section className={sectionContactClass}>
             {isLoading &&
               <Loader>
-                <BunIcon />
+                <ChapatiIcon />
               </Loader>
             }
             <Element name='contact'>
