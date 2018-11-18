@@ -10,7 +10,7 @@ export const Footer = () => (
   <div className='Footer'>
     <div className='FooterInner'>
       <div className='FooterSocial'>
-        <a href='https://www.instagram.com/eatatpiquant/' target='_blank'>
+        <a href='https://www.instagram.com/portia_piquant/' target='_blank'>
           <InstaIcon />
         </a>
         <a href='https://www.facebook.com/eatatpiquant/' target='_blank'>

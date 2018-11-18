@@ -205,7 +205,7 @@ class Home extends Component {
               </div>
             </div>
             <div className='HomeInsta'>
-              <a href='https://www.instagram.com/eatatpiquant/' target='_blank'>
+              <a href='https://www.instagram.com/portia_piquant/' target='_blank'>
                 <InstaIcon reversed responsive />
                 <h3>Follow me on Instagram</h3>
               </a>
