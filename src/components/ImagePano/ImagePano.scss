@@ -4,6 +4,7 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   box-shadow:
     inset 0px 11px 20px -8px $color-quiet-black-transparent,
     inset 0px -11px 20px -8px $color-quiet-black-transparent;
@@ -28,7 +29,6 @@
   }
 
   @media #{$large-and-up} {
-
     h2 {
       padding: 300px 0;
     }
