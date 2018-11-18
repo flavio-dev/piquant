@@ -1,6 +1,8 @@
 {
   "about": {
     "title": "Hi, I'm Portia",
+    "panoimagelarge": "https://github.com/flavio-dev/piquant/raw/master/images/panolarge.jpeg",
+    "panoimagesmall": "https://github.com/flavio-dev/piquant/raw/master/images/panosmall.jpg",
     "paragraphs": [
       "Piquant is my definition of how I make food: in an exciting way! And that spicy doesn't mean hot. To me, flavours come in different shapes & colours.",
       "I'm passionate about cooking & authenticity is key. Everything is handmade & homemade.",
