@@ -227,7 +227,7 @@ class Home extends Component {
             <div className='HomeInsta'>
               <a href='https://www.instagram.com/portia_piquant/' target='_blank'>
                 <InstaIcon reversed responsive />
-                <h3>Follow me on Instagram</h3>
+                <h3>See what I'am up to on Instagram</h3>
               </a>
             </div>
           </ScrollTrigger>
