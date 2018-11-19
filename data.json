@@ -15,19 +15,19 @@
   "images": {
     "image1": {
       "url": "https://github.com/flavio-dev/piquant/raw/master/images/08.jpg",
-      "blurb": ""
+      "blurb": "Chana chaat masala, homemade chutneys in a thepla cup"
     },
     "image2": {
       "url": "https://github.com/flavio-dev/piquant/raw/master/images/09.jpg",
-      "blurb": ""
+      "blurb": "Tamarind and jaggery glazed paneer, pumpkin skewers"
     },
     "image3": {
       "url": "https://github.com/flavio-dev/piquant/raw/master/images/12.jpg",
-      "blurb": ""
+      "blurb": "Tempered smoked aubergine, coconut and tahini curd, papads"
     },
     "image4": {
       "url": "https://github.com/flavio-dev/piquant/raw/master/images/07.jpg",
-      "blurb": ""
+      "blurb": "Chai spiced crème caramel"
     },
     "image5": {
       "url": "https://github.com/flavio-dev/piquant/raw/master/images/11.jpg",
@@ -35,7 +35,7 @@
     },
     "image6": {
       "url": "https://github.com/flavio-dev/piquant/raw/master/images/13.jpg",
-      "blurb": ""
+      "blurb": "Spiced hibiscus cheesecake"
     }
   },
   "events": {
