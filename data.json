@@ -43,17 +43,7 @@
     "list": [
       {
         "date": "2018-06-22 16:30",
-        "desc": "Buns & beers @ GOLD Galerie in Neukölln, Day 1",
-        "url": "https://www.facebook.com/events/375231996331732/"
-      },
-      {
-        "date": "2018-06-23 16:30",
-        "desc": "Buns & beers @ GOLD Galerie in Neukölln, Day 2",
-        "url": "https://www.facebook.com/events/375231996331732/"
-      },
-      {
-        "date": "2018-06-24 16:30",
-        "desc": "Buns & beers @ GOLD Galerie in Neukölln, Day 3",
+        "desc": "Buns & beers @ GOLD Galerie in Neukölln",
         "url": "https://www.facebook.com/events/375231996331732/"
       },
       {
@@ -83,6 +73,11 @@
         "date": "2019-05-16 19:30",
         "desc": "Private supper-club @ a secret location in Neukölln",
         "url": "https://www.rsvp-popup.com/popups/mexico-meets-indian-supper-club-berlin"
+      },
+      {
+        "date": "2019-05-28 18:00",
+        "desc": "Pop-up @ arkaoda in Neukölln",
+        "url": "https://www.facebook.com/events/418183595672991/"
       }
     ]
   },
