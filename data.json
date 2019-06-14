@@ -61,13 +61,8 @@
       },
       {
         "date": "2019-05-03 23:30",
-        "desc": "Pop-up @ Paolo Pinkel in Neukölln, Day 1",
+        "desc": "Pop-up @ Paolo Pinkel in Neukölln",
         "url": "https://www.facebook.com/events/373186716625375"
-      },
-      {
-        "date": "2019-05-04 23:30",
-        "desc": "Pop-up @ Paolo Pinkel in Neukölln, Day 2",
-        "url": "https://www.facebook.com/events/373186713292042"
       },
       {
         "date": "2019-05-16 19:30",
@@ -78,6 +73,10 @@
         "date": "2019-05-28 18:00",
         "desc": "Pop-up @ arkaoda in Neukölln",
         "url": "https://www.facebook.com/events/418183595672991/"
+      },
+      {
+        "date": "2019-06-21 19:00",
+        "desc": "Pop-up @ Café Bravo (KW Institute for Contemporary Art) in Mitte"
       }
     ]
   },
