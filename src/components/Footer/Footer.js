@@ -6,6 +6,8 @@ import InstaIcon from 'components/InstaIcon'
 import FacebookIcon from 'components/FacebookIcon'
 import HeartIcon from 'components/HeartIcon'
 
+import thisYear from 'utils/thisYear'
+
 export const Footer = () => (
   <div className='Footer'>
     <div className='FooterInner'>
@@ -21,7 +23,7 @@ export const Footer = () => (
         <div className='FooterInfoMadeBy'>
           made with <HeartIcon /> by <a href='https://github.com/flavio-dev' target='_blank'>flaviø</a>
         </div>
-        <div>copyrights 2018</div>
+        <div>copyrights {thisYear()}</div>
       </div>
     </div>
   </div>
