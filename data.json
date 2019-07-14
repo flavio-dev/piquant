@@ -42,19 +42,6 @@
     "title": "Where & when to eat at Piquant",
     "list": [
       {
-        "date": "2018-06-22 16:30",
-        "desc": "Buns & beers @ GOLD Galerie in Neukölln",
-        "url": "https://www.facebook.com/events/375231996331732/"
-      },
-      {
-        "date": "2018-11-08 20:00",
-        "desc": "Private supper-club @ a secret location in Neukölln"
-      },
-      {
-        "date": "2018-11-09 20:00",
-        "desc": "Private supper-club @ a secret location in Neukölln"
-      },
-      {
         "date": "2019-01-18 19:30",
         "desc": "Private supper-club - vegetarian edition @ a secret location in Neukölln",
         "url": "https://www.eventbrite.de/e/piquant-pop-up-tickets-54066065056"
@@ -77,6 +64,10 @@
       {
         "date": "2019-06-21 19:00",
         "desc": "Pop-up @ Café Bravo (KW Institute for Contemporary Art) in Mitte"
+      },
+      {
+        "date": "2019-07-21 10:00",
+        "desc": "Indian inspired pop-up brunch @ No Bananas in Neukölln"
       }
     ]
   },
