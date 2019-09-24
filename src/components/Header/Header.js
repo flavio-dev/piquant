@@ -54,7 +54,7 @@ class Header extends Component {
               className='HeaderButton'
               onClick={this.closeMenu}
             >
-              <Button text={'Get In Touch'} />
+              <Button text={'Hire Me'} />
             </Link>
           </div>
         </div>

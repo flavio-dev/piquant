@@ -34,3 +34,6 @@ build/
 .editorconfig
 .eslintignore
 .eslintrc.json
+
+.htaccess
+.htaccessBAK

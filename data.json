@@ -4,12 +4,10 @@
     "panoimagelarge": "https://github.com/flavio-dev/piquant/raw/master/images/panolarge.jpeg",
     "panoimagesmall": "https://github.com/flavio-dev/piquant/raw/master/images/panosmall.jpg",
     "paragraphs": [
-      "Chai infused crème caramel, padron peppers stuffed with masala and chana chaat in thepla cups.",
-      "This is just a taster of the unique flavours you’ll experience at Piquant, an insatiable dining experience hosted in Berlin by me, Portia.",
-      "The inspiration behind my cooking stems from a childhood of my mother’s amazing Indian food and living in London’s vibrant food scene for 17 years. The combination of these two, results in my love of creating dishes that break from tradition.",
-      "The best flavours are made when it’s by your own two hands. This means I create everything from scratch where possible. This includes all the spice mixes, any dough that I might use, along with all the sauces, chutneys and marinades.",
-      "I host supper clubs at a secret location in Neukölln. The setting is inviting and intimate, where a maximum of 10 guests share a table and plenty of appetite. For further enquiries, please don’t hesitate to drop me an email at the bottom of this page.",
-      "I hope to see you at the next Piquant dining experience."
+      "Piquant represents food that is exciting and tasty, that sparks curiosity and interest, wherever you experience it",
+      "Hi, I’m Portia and my background as an occupational therapist has inspired me to look at food in a different way. As well as using food as a medium to bring people together, it can be used to empower individuals by engaging them in the cooking process and create positive memories.",
+      "I offer services such as being a private chef for your next event, or consultation and execution of a menu we create together so you can treat your friends, family and guests. I also provide meal planning and cooking techniques to fit around a busy schedule.",
+      "Whatever your need, let me unleash your potential and create piquant food memories with you."
     ]
   },
   "images": {
@@ -42,38 +40,27 @@
     "title": "Where & when to eat at Piquant",
     "list": [
       {
-        "date": "2019-01-18 19:30",
-        "desc": "Private supper-club - vegetarian edition @ a secret location in Neukölln",
-        "url": "https://www.eventbrite.de/e/piquant-pop-up-tickets-54066065056"
-      },
-      {
-        "date": "2019-05-03 23:30",
-        "desc": "Pop-up @ Paolo Pinkel in Neukölln",
-        "url": "https://www.facebook.com/events/373186716625375"
-      },
-      {
-        "date": "2019-05-16 19:30",
-        "desc": "Private supper-club @ a secret location in Neukölln",
-        "url": "https://www.rsvp-popup.com/popups/mexico-meets-indian-supper-club-berlin"
-      },
-      {
-        "date": "2019-05-28 18:00",
-        "desc": "Pop-up @ arkaoda in Neukölln",
-        "url": "https://www.facebook.com/events/418183595672991/"
-      },
-      {
-        "date": "2019-06-21 19:00",
-        "desc": "Pop-up @ Café Bravo (KW Institute for Contemporary Art) in Mitte"
-      },
-      {
-        "date": "2019-07-21 10:00",
+        "date": "2019-10-31 19:30",
         "desc": "Indian inspired pop-up brunch @ No Bananas in Neukölln",
         "url": "https://www.facebook.com/events/363036261045499/"
       }
     ]
   },
   "contact": {
-    "title": "Want to get in touch?",
-    "paragraphs": ["For reservations and any other enquiries, please complete the form:"]
+    "title": "Hire me",
+    "paragraphs": ["Private chef:
+      Sit back, relax and enjoy a dinner party in the comfort of your own home, private kitchen or workplace, whilst I do the cooking.
+      Pricing from €60 pp min booking requirement: 6 people.",
+      "Curate your own dinner party:
+      Throw your own dinner party - Let’s work together and curate a menu for your next dinner party.  Learn to cook a 3 course menu that will wow your guests.
+      Pricing: Please contact for consultation.",
+      "Cooking classes:
+      Learn recipes that taste delicious for you, your friends and your family. Master new techniques and discover new flavours. Too busy to cook because you have a busy schedule? Learn how to prepare meals in advance. Can work 1:1 or groups of upto 4.
+      1:1 session - €75 ph. Please send enquiry for group prices",
+      "Cocktail making or shaking:
+      Hire me to shake up interesting cocktails at your next event or facilitate a cocktail class for you and your friends or at your next team building event.
+      For corporate events please send an enquiry using the form.
+      "
+    ]
   }
 }
