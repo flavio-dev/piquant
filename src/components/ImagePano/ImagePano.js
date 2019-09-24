@@ -13,7 +13,7 @@ export const ImagePano = ({urlSmall, urlLarge, title}) => {
           }}
           className='ImagePano'
         >
-          <h2><span>{title}</span></h2>
+          <h2>{title && !!title.length && <span>{title}</span>}</h2>
         </div>
       </div>
       <div className='ImagePanoSmall'>
@@ -23,7 +23,7 @@ export const ImagePano = ({urlSmall, urlLarge, title}) => {
           }}
           className='ImagePano'
         >
-          <h2><span>{title}</span></h2>
+          <h2>{title && !!title.length && <span>{title}</span>}</h2>
         </div>
       </div>
     </Fragment>
