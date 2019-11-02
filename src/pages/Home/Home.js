@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Element } from 'react-scroll'
 import ScrollTrigger from 'react-scroll-trigger'
+import PropTypes from 'prop-types'
 
 import logo from 'images/logo.png'
 import Loader from 'components/Loader'
@@ -10,8 +11,6 @@ import InstaIcon from 'components/InstaIcon'
 import ChapatiIcon from 'components/ChapatiIcon'
 import EventPiquant from 'components/Event'
 import Separator from 'components/Separator'
-import whatwgFetch from 'utils/fetch'
-import sortEvents from 'utils/sortEvents'
 
 import './Home.css'
 
@@ -19,42 +18,23 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      data: {
-        about: {
-          title: '',
-          panoimagelarge: '',
-          panoimagesmall: '',
-          paragraphs: []
-        },
-        images: {
-          image1: {},
-          image2: {},
-          image3: {},
-          image4: {},
-          image5: {},
-          image6: {}
-        },
-        events: {
-          title: '',
-          list: []
-        },
-        sortedEvents: {
-          futureEvents: [],
-          pastEvents: []
-        },
-        contact: {
-          title: '',
-          paragraphs: []
-        }
-      },
+      data: props.data,
+      isLoading: props.isLoading,
       showLogo: false,
       showAboutText: false,
       showImages: false,
       showSectionAbout: false,
       showSectionContact: false,
-      showSectionEvents: false,
-      isLoading: true
+      showSectionEvents: false
     }
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    if (props.isLoading === false) {
+      return {...state, data: props.data, isLoading: false}
+    }
+
+    return state
   }
 
   handleLogoLoaded = () => {
@@ -109,18 +89,6 @@ class Home extends Component {
         })
         break
     }
-  }
-
-  componentDidMount() {
-    whatwgFetch('https://raw.githubusercontent.com/flavio-dev/piquant/master/data.json')
-      .then(res => {
-        const sortedEvents = sortEvents(res.events.list)
-        const newData = Object.assign({}, this.state.data, res, sortedEvents)
-        this.setState({
-          data: newData,
-          isLoading: false
-        })
-      })
   }
 
   render() {
@@ -315,6 +283,11 @@ class Home extends Component {
       </div>
     )
   }
+}
+
+Home.propTypes = {
+  data: PropTypes.object,
+  isLoading: PropTypes.bool
 }
 
 export default Home

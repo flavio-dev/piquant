@@ -1,0 +1,173 @@
+@import "globals.scss";
+
+%InnerSectionMargins {
+  margin-top: 20px;
+
+  @media #{$medium-and-up} {
+    margin-top: 25px;
+  }
+
+  @media #{$large-and-up} {
+    margin-top: 30px;
+  }
+}
+
+%BottomPaddings {
+  padding-bottom: 10px;
+
+  @media #{$medium-and-up} {
+    padding-bottom: 15px;
+  }
+
+  @media #{$large-and-up} {
+    padding-bottom: 20px;
+  }
+}
+
+.Home {
+  margin-top: 10px;
+  text-align: center;
+
+  @media #{$medium-and-up} {
+    margin-top: 25px;
+  }
+}
+
+.HomeLogo {
+  @include slow-transitions(all);
+  @include sections();
+  margin-top: 30px;
+  max-width: 600px;
+  opacity: 0;
+  width: 75%;
+
+  &.HomeLogoShow {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+.HomeAbout {
+  @include sections();
+  @include slow-transitions(all)
+  opacity: 0;
+  position: relative;
+  // top: 30px;
+
+  &.HomeSectionShow {
+    opacity: 1;
+    // top: 0px;
+  }
+}
+
+.HomeSection {
+  @include default-wrapper-width();
+  @include slow-transitions(all)
+  opacity: 0;
+  position: relative;
+  top: 30px;
+
+  &.HomeSectionShow {
+    opacity: 1;
+    top: 0px;
+  }
+
+  h2 {
+    @extend %BottomPaddings;
+  }
+}
+
+.HomeImages {
+  @include slow-transitions(all);
+  @extend %InnerSectionMargins;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  position: relative;
+  top: 30px;
+
+  &.HomeImagesShow {
+    opacity: 1;
+    top: 0px;
+  }
+
+  @media #{$small-and-down} {
+    .HomeImageWrapper:last-child,
+    .HomeImageWrapper:nth-last-child(2) {
+      display: none;
+    }
+  }
+
+  @media #{$medium-and-up} {
+    justify-content: space-between;
+  }
+}
+
+.HomeImageWrapper {
+  margin-top: 4%;
+  width: 90%;
+
+  @media #{$medium-and-up} {
+    width: 48%;
+  }
+
+  @media #{$large-and-up} {
+    width: 32%;
+  }
+}
+
+.HomeInsta,
+.HomeEventsTitle,
+.HomeContact {
+  @extend %InnerSectionMargins;
+}
+
+.HomeEventsBottomSpace {
+  @extend %BottomPaddings;
+}
+
+.HomeEventsPast {
+  text-decoration: line-through;
+}
+
+.HomeContact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  input, textarea {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  @media #{$medium-and-up} {
+    textarea {
+      max-width: 500px;
+    }
+  }
+
+  @media #{$large-and-up} {
+    textarea {
+      max-width: 600px;
+    }
+  }
+}
+
+.HomeContactNameEmail {
+  width: 100%;
+
+  @media #{$medium-and-up} {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+
+    input {
+      width: 48%;
+    }
+  }
+
+  @media #{$large-and-up} {
+    max-width: 600px;
+  }
+}
